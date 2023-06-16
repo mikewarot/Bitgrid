@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="BenchMark.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="41" Y="7"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="bitgridengine.pas"/>
+        <UnitName Value="BitGridEngine"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="3">
+      <Position>
+        <Filename Value="BenchMark.lpr"/>
+        <Caret Line="6" Column="28"/>
+      </Position>
+      <Position>
+        <Filename Value="BenchMark.lpr"/>
+        <Caret Line="3" Column="30"/>
+      </Position>
+      <Position>
+        <Filename Value="BenchMark.lpr"/>
+        <Caret Line="25" Column="76"/>
+      </Position>
+      <Position>
+        <Filename Value="BenchMark.lpr"/>
+        <Caret Line="14" Column="31"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
