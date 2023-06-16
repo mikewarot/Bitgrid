@@ -26,6 +26,12 @@ Type
 Const
   PassThrough = $FB73EA62D951C840;
 
+  LeftBits    = $1111111100000000;            LeftBit     = 8;
+  RightBits   = $1100110011001100;            RightBit    = 2;
+  UpBits      = $1010101010101010;            UpBit       = 1;
+  DownBits    = $1111000011110000;            DownBit     = 4;
+  AllBits     = (LeftBits * RightBit) or (RightBits * LeftBit) OR (UpBits * DownBit) or (DownBits * UpBit);
+
 implementation
 
 Constructor TBitGrid.Init(Xsize, YSize : integer);

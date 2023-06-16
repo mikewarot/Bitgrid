@@ -39,8 +39,8 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  Grid1.Init(10,10);
-  Form1.Memo1.Append('10x10 grid created');
+  Grid1.Init(30,10);
+  Form1.Memo1.Append('30x10 grid created');
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -48,6 +48,11 @@ var
   x,y : integer;
   s : string;
 begin
+  if Checkbox1.Checked then
+    Grid1.Cells[3,7].input := $0f
+  else
+    Grid1.Cells[3,7].input := 00;
+
   memo1.Append('Program Dump: ');
   for y := 0 to Grid1.Height-1 do
   begin
@@ -75,15 +80,15 @@ begin
     memo1.Append(s);
   end;
 
-
+  memo1.Append('Allbits = '+IntToHex(AllBits,16));
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   if Checkbox1.Checked then
-    Grid1.Cells[0,0].input := $0f
+    Grid1.Cells[3,7].input := $0f
   else
-    Grid1.Cells[0,0].input := 00;
+    Grid1.Cells[3,7].input := 00;
 
   Grid1.DoClock;
 end;
