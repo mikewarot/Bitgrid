@@ -45,3 +45,10 @@ Time/Layer   :    0.087 Seconds
 Time/Cell    :    0.083 µSec
 
 How far can I optimize this?
+First pass, saving the address of the next cell, and only doing an OR or an AND, instead of both
+Creating 1024*1024 bitgrid
+Running 100 full cycles
+Done
+Time Elapsed :    5.840 Seconds
+Time/Layer   :    0.058 Seconds
+Time/Cell    :    0.056 µSec

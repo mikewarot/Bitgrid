@@ -57,7 +57,7 @@ end;
 
 Procedure TBitGrid.DoClock;
 var
-  x,y : integer;
+  x,y,next : integer;
 begin
   // do phase A, only even cells
   for y := 0 to Height-1 do
@@ -69,22 +69,33 @@ begin
             output:= lookup SHR (input*4) AND $0f;
             // distribute the output to the inputs of neigbors
             //   right
-            cells[(x+1) mod width,y].input := cells[(x+1) mod width,y].input AND $07;
+            next := (x+1) mod width;
             if (output AND 2) <> 0 then
-              cells[(x+1) mod width,y].input := cells[(x+1) mod width,y].input OR $08;
-            //   left
-            cells[(x+width-1) mod width,y].input := cells[(x+width-1) mod width,y].input AND $0d;
-            if (output AND 8) <> 0 then
-              cells[(x+width-1) mod width,y].input := cells[(x+width-1) mod width,y].input OR $02;
-            //   down
-            cells[x,(y+1) mod height].input := cells[x,(y+1) mod height].input AND $0e;
-            if (output AND 4) <> 0 then
-              cells[x,(y+1) mod height].input := cells[x,(y+1) mod height].input OR $01;
-            //   up
-            cells[x,(y+height-1) mod height].input := cells[x,(y+height-1) mod height].input AND $0b;
-            if (output AND 1) <> 0 then
-              cells[x,(y+height-1) mod height].input := cells[x,(y+height-1) mod height].input OR $04;
+              cells[next,y].input := cells[next,y].input OR $08
+            else
+              cells[next,y].input := cells[next,y].input AND $07;
 
+            //   left
+            next := (x+width-1) mod width;
+            if (output AND 8) <> 0 then
+              cells[next,y].input := cells[next,y].input OR $02
+            else
+              cells[next,y].input := cells[next,y].input AND $0d;
+
+            //   down
+            next := (y+1) mod height;
+            if (output AND 4) <> 0 then
+              cells[x,next].input := cells[x,next].input OR $01
+            else
+              cells[x,next].input := cells[x,next].input AND $0e;
+
+
+            //   up
+            next := (y+height-1) mod height;
+            if (output AND 1) <> 0 then
+              cells[x,next].input := cells[x,next].input OR $04
+            else
+              cells[x,next].input := cells[x,next].input AND $0b;
           end;
 
   // do phase B, only odd cells
@@ -97,22 +108,33 @@ begin
             output:= lookup SHR (input*4) AND $0f;
             // distribute the output to the inputs of neigbors
             //   right
-            cells[(x+1) mod width,y].input := cells[(x+1) mod width,y].input AND $07;
+            next := (x+1) mod width;
             if (output AND 2) <> 0 then
-              cells[(x+1) mod width,y].input := cells[(x+1) mod width,y].input OR $08;
-            //   left
-            cells[(x+width-1) mod width,y].input := cells[(x+width-1) mod width,y].input AND $0d;
-            if (output AND 8) <> 0 then
-              cells[(x+width-1) mod width,y].input := cells[(x+width-1) mod width,y].input OR $02;
-            //   down
-            cells[x,(y+1) mod height].input := cells[x,(y+1) mod height].input AND $0e;
-            if (output AND 4) <> 0 then
-              cells[x,(y+1) mod height].input := cells[x,(y+1) mod height].input OR $01;
-            //   up
-            cells[x,(y+height-1) mod height].input := cells[x,(y+height-1) mod height].input AND $0b;
-            if (output AND 1) <> 0 then
-              cells[x,(y+height-1) mod height].input := cells[x,(y+height-1) mod height].input OR $04;
+              cells[next,y].input := cells[next,y].input OR $08
+            else
+              cells[next,y].input := cells[next,y].input AND $07;
 
+            //   left
+            next := (x+width-1) mod width;
+            if (output AND 8) <> 0 then
+              cells[next,y].input := cells[next,y].input OR $02
+            else
+              cells[next,y].input := cells[next,y].input AND $0d;
+
+            //   down
+            next := (y+1) mod height;
+            if (output AND 4) <> 0 then
+              cells[x,next].input := cells[x,next].input OR $01
+            else
+              cells[x,next].input := cells[x,next].input AND $0e;
+
+
+            //   up
+            next := (y+height-1) mod height;
+            if (output AND 1) <> 0 then
+              cells[x,next].input := cells[x,next].input OR $04
+            else
+              cells[x,next].input := cells[x,next].input AND $0b;
           end;
 
 

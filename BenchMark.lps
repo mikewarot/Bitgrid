@@ -8,15 +8,17 @@
       <Unit>
         <Filename Value="BenchMark.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos X="10" Y="7"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="bitgridengine.pas"/>
         <UnitName Value="BitGridEngine"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
+        <TopLine Value="107"/>
+        <CursorPos Y="140"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit>
