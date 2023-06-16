@@ -20,6 +20,8 @@ this should be the default for all cells, or all zeros, I'm not sure yet
 
 Evaluation:
   Cells will be evaluated in two phases, to avoid race conditions, and make it easier to understand, in the manner of coloring a chessboard, starting with 0,0
+
+  As of 6/16/2023 - benchmarks show about 60 nanoseconds/cell on a fast processor
   
 Probes:
   It should be possible to force a stream of bits to a given cell input, again this is arbitrary
