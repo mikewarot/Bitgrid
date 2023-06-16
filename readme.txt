@@ -35,4 +35,13 @@ Data Structure:
   
 6/15/2023 - Code looks awful, but I can ripple bits accross a bitgrid
   
+6/16/2023 - MAW - First benchmarks
   
+Creating 1024*1024 bitgrid
+Running 100 full cycles
+Done
+Time Elapsed :    8.682 Seconds
+Time/Layer   :    0.087 Seconds
+Time/Cell    :    0.083 µSec
+
+How far can I optimize this?

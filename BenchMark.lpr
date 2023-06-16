@@ -4,7 +4,7 @@ uses
 const
   X = 1024;  // size of the bitgrid to build
   Y = 1024;
-  T = 10;    // how many times to run it
+  T = 100;    // how many times to run it
 var
   Grid : TBitGrid;
   i : integer;
