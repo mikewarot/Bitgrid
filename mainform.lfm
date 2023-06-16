@@ -1,0 +1,51 @@
+object Form1: TForm1
+  Left = 668
+  Height = 711
+  Top = 125
+  Width = 1222
+  Caption = 'Form1'
+  ClientHeight = 711
+  ClientWidth = 1222
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.2.6.0'
+  object Memo1: TMemo
+    Left = 38
+    Height = 597
+    Top = 35
+    Width = 1138
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+    WordWrap = False
+  end
+  object Button1: TButton
+    Left = 32
+    Height = 25
+    Top = 656
+    Width = 155
+    Caption = 'Dump Contents'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 230
+    Height = 25
+    Top = 658
+    Width = 75
+    Caption = 'Button2'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object CheckBox1: TCheckBox
+    Left = 935
+    Height = 25
+    Top = 659
+    Width = 102
+    Caption = 'CheckBox1'
+    OnChange = CheckBox1Change
+    TabOrder = 3
+  end
+end

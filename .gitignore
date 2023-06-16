@@ -1,0 +1,12 @@
+*.exe
+*.zip
+*.xl*
+*.csv
+backup/*
+lib/*
+test/*
+*/backup/*
+*/lib/*
+*/test/*
+
+
