@@ -1,6 +1,8 @@
 Mike Warot's Bitgrid Engine in Pascal, with GUI
 
-A bitgrid is a Cartesian Array of cells, each having 4 bits of input from neighboring cells, and 4 outputs to them. To make this universal, each cell requires 4 look up tables, each with 16 entries to match all possible input states. The easiest way to represent this is a 16 character long hex number, one digit per possibilitity.
+## What's a BitGrid?
+
+A Bitgrid is a Cartesian Array of cells, each having 4 bits of input from neighboring cells, and 4 outputs to them. To make this universal, each cell requires 4 look up tables, each with 16 entries to match all possible input states. The easiest way to represent this is a 16 character long hex number, one digit per possibilitity.
 
 Thus, a compact display of the program contents of a bitgrid might be a table of such entries
 
