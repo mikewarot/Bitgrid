@@ -34,6 +34,15 @@ Const
 
 implementation
 
+Function Wrap(N,Bound : Integer):Integer;
+begin
+  While N >= Bound do
+    N := N - Bound;
+  While N < 0 do
+    N := N + Bound;
+  Wrap := N;
+end;
+
 Constructor TBitGrid.Init(Xsize, YSize : integer);
 var
   x,y : integer;
@@ -69,21 +78,21 @@ begin
             output:= lookup SHR (input*4) AND $0f;
             // distribute the output to the inputs of neigbors
             //   right
-            next := (x+1) mod width;
+            next := wrap((x+1),width);
             if (output AND 2) <> 0 then
               cells[next,y].input := cells[next,y].input OR $08
             else
               cells[next,y].input := cells[next,y].input AND $07;
 
             //   left
-            next := (x+width-1) mod width;
+            next := wrap(x-1,width);
             if (output AND 8) <> 0 then
               cells[next,y].input := cells[next,y].input OR $02
             else
               cells[next,y].input := cells[next,y].input AND $0d;
 
             //   down
-            next := (y+1) mod height;
+            next := wrap(y+1,height);
             if (output AND 4) <> 0 then
               cells[x,next].input := cells[x,next].input OR $01
             else
@@ -91,7 +100,7 @@ begin
 
 
             //   up
-            next := (y+height-1) mod height;
+            next := wrap(y-1,height);
             if (output AND 1) <> 0 then
               cells[x,next].input := cells[x,next].input OR $04
             else
@@ -108,21 +117,21 @@ begin
             output:= lookup SHR (input*4) AND $0f;
             // distribute the output to the inputs of neigbors
             //   right
-            next := (x+1) mod width;
+            next := wrap((x+1),width);
             if (output AND 2) <> 0 then
               cells[next,y].input := cells[next,y].input OR $08
             else
               cells[next,y].input := cells[next,y].input AND $07;
 
             //   left
-            next := (x+width-1) mod width;
+            next := wrap(x-1,width);
             if (output AND 8) <> 0 then
               cells[next,y].input := cells[next,y].input OR $02
             else
               cells[next,y].input := cells[next,y].input AND $0d;
 
             //   down
-            next := (y+1) mod height;
+            next := wrap(y+1,height);
             if (output AND 4) <> 0 then
               cells[x,next].input := cells[x,next].input OR $01
             else
@@ -130,7 +139,7 @@ begin
 
 
             //   up
-            next := (y+height-1) mod height;
+            next := wrap(y-1,height);
             if (output AND 1) <> 0 then
               cells[x,next].input := cells[x,next].input OR $04
             else
