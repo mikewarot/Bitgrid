@@ -22,7 +22,7 @@ begin
   WriteLn('Done');
   TimeElapsed := MilliSecondsBetween(T2,T1)/1000.0;
   WriteLn('Time Elapsed : ',TimeElapsed:8:3,' Seconds');
-  WriteLn('Time/Layer   : ',(TimeElapsed/T):8:3,' Seconds, or ',(T/TimeElapsed):8:3,' Hz effective clock rate');
+  WriteLn('Time/Layer   : ',(TimeElapsed/T):8:3,' Seconds, or ',(T/TimeElapsed):4:3,' Hz effective clock rate');
   WriteLn('Time/Cell    : ',(TimeElapsed*1000000.0/(X*Y*T)):8:3,' µSec');
 end.
 
