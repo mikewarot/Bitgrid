@@ -21,17 +21,19 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="41"/>
-        <CursorPos X="40" Y="54"/>
+        <TopLine Value="82"/>
+        <CursorPos Y="105"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="bitgridengine.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BitGridEngine"/>
         <EditorIndex Value="2"/>
-        <CursorPos Y="33"/>
+        <TopLine Value="13"/>
+        <CursorPos X="34" Y="36"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit>
@@ -44,19 +46,7 @@
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="27">
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="8" Column="32"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgrid_gui.lpr"/>
-        <Caret Line="13" Column="26"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgrid_gui.lpr"/>
-        <Caret Line="22" Column="50"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="bitgrid_gui.lpr"/>
         <Caret Line="22" Column="50"/>
@@ -156,6 +146,26 @@
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="100" Column="24" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="54" Column="40" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="56" Column="40" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="109" Column="5" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="108" Column="39" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="111" Column="56" TopLine="86"/>
       </Position>
     </JumpHistory>
     <RunParams>

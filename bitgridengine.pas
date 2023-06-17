@@ -32,6 +32,9 @@ Const
   DownBits    = $1111000011110000;            DownBit     = 4;
   AllBits     = (LeftBits * RightBit) or (RightBits * LeftBit) OR (UpBits * DownBit) or (DownBits * UpBit);
 
+  Reflector   = $FEDCBA9876543210;
+  Counter     = $5DA25DA25DA25DA2;
+
 implementation
 
 Function Wrap(N,Bound : Integer):Integer;

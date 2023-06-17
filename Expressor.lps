@@ -9,13 +9,13 @@
         <Filename Value="Expressor.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="8"/>
-        <CursorPos X="10" Y="43"/>
+        <TopLine Value="11"/>
+        <CursorPos X="20" Y="43"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
+    <JumpHistory HistoryIndex="2">
       <Position>
         <Filename Value="Expressor.lpr"/>
         <Caret Line="9" Column="6"/>
@@ -23,6 +23,10 @@
       <Position>
         <Filename Value="Expressor.lpr"/>
         <Caret Line="40" Column="40" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="Expressor.lpr"/>
+        <Caret Line="29" Column="23" TopLine="8"/>
       </Position>
     </JumpHistory>
     <RunParams>

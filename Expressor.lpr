@@ -22,12 +22,25 @@ begin
     left  := (i AND _left) <> 0;
 
     //  User stuff goes here
-
-    out_up := up;                  // simple flow through example
-    out_down := down;
-    out_left := left;
+ (*
+    out_up := right;
+    out_down := right;
+    if Up AND (Not Right) then
+      out_left := NOT Left
+    else
+      out_left := left;
     out_right := right;
-
+  *)
+ (*
+    out_up := false;
+    out_down := false;
+    out_left := not left;
+    out_right := false;
+*)
+    out_up := false;
+    out_down := left;
+    out_left := up;
+    out_right := right;
     // back to normal stuff here
 
     x := 0;
