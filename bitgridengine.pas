@@ -98,7 +98,6 @@ begin
             else
               cells[x,next].input := cells[x,next].input AND $0e;
 
-
             //   up
             next := wrap(y-1,height);
             if (output AND 1) <> 0 then
@@ -137,7 +136,6 @@ begin
             else
               cells[x,next].input := cells[x,next].input AND $0e;
 
-
             //   up
             next := wrap(y-1,height);
             if (output AND 1) <> 0 then
@@ -145,8 +143,6 @@ begin
             else
               cells[x,next].input := cells[x,next].input AND $0b;
           end;
-
-
 end;
 
 end.
