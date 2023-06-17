@@ -8,14 +8,15 @@
       <Unit>
         <Filename Value="BenchMark.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="10" Y="7"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="11"/>
+        <CursorPos X="110" Y="25"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="bitgridengine.pas"/>
         <UnitName Value="BitGridEngine"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="107"/>
         <CursorPos Y="140"/>
@@ -23,7 +24,7 @@
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="3">
+    <JumpHistory HistoryIndex="4">
       <Position>
         <Filename Value="BenchMark.lpr"/>
         <Caret Line="6" Column="28"/>
@@ -39,6 +40,10 @@
       <Position>
         <Filename Value="BenchMark.lpr"/>
         <Caret Line="14" Column="31"/>
+      </Position>
+      <Position>
+        <Filename Value="BenchMark.lpr"/>
+        <Caret Line="25" Column="65" TopLine="11"/>
       </Position>
     </JumpHistory>
     <RunParams>
