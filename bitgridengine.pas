@@ -18,6 +18,7 @@ Type
   TBitGrid = object
       Cells : array of array of TBitCell;
       Height,Width : integer;
+      CycleCount   : UInt64;
       constructor Init(Xsize, YSize : integer);
       destructor Done;
       procedure DoClock;
@@ -50,6 +51,7 @@ Constructor TBitGrid.Init(Xsize, YSize : integer);
 var
   x,y : integer;
 begin
+  CycleCount := 0;
   SetLength(Cells,Xsize,Ysize);
   width := Xsize;
   height := Ysize;
@@ -146,6 +148,7 @@ begin
             else
               cells[x,next].input := cells[x,next].input AND $0b;
           end;
+  Inc(CycleCount);
 end;
 
 end.

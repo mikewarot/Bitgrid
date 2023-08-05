@@ -1,0 +1,5 @@
+program DecodeStuff;
+
+begin
+end.
+

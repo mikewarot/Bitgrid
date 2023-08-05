@@ -52,3 +52,23 @@ Done
 Time Elapsed :    5.840 Seconds
 Time/Layer   :    0.058 Seconds
 Time/Cell    :    0.056 µSec
+
+A+B,B,A,0
+
+3210  A=1, B=2
+0000 - False
+0001 - not (a or b)
+0010 - a AND (not B)
+0011 - NOT b
+0100 - b AND (not a)
+0101 - NOT a
+0110 - a XOR b
+0111 - NOT (a AND b)
+1000 - a AND b
+1001 - NOT (a XOR b)
+1010 - a
+1011 - (NOT a) OR b
+1100 - b
+1101 - b or (NOT a)
+1110 - a OR b
+1111 - True

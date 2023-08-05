@@ -83,6 +83,7 @@ begin
   end;
 
   memo1.Append('Allbits = '+IntToHex(AllBits,16));
+  memo1.Append(' '+IntToStr(Grid1.CycleCount) + ' cycles executed');
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);

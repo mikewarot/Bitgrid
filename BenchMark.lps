@@ -9,7 +9,7 @@
         <Filename Value="BenchMark.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="46" Y="3"/>
+        <CursorPos Y="29"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
@@ -28,7 +28,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="4">
+    <JumpHistory HistoryIndex="6">
       <Position>
         <Filename Value="BenchMark.lpr"/>
         <Caret Line="6" Column="28"/>
@@ -48,6 +48,14 @@
       <Position>
         <Filename Value="BenchMark.lpr"/>
         <Caret Line="25" Column="65" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="BenchMark.lpr"/>
+        <Caret Line="29"/>
+      </Position>
+      <Position>
+        <Filename Value="BenchMark.lpr"/>
+        <Caret Line="13" Column="19"/>
       </Position>
     </JumpHistory>
     <RunParams>

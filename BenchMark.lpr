@@ -10,10 +10,23 @@ var
   i : integer;
   T1,T2 : tDateTime;
   TimeElapsed, TimePerCell : Double;
+  dx,dy : integer;
 begin
   SetConsoleOutputCP(CP_UTF8);     // so we can print   µSec
   WriteLn('Creating ',x,'*',y,' bitgrid');
   Grid.Init(X,Y);
+
+  for dy := 0 to Grid.Height-1 do
+    for dx := 0 to Grid.Width-1 do
+      Grid.Cells[dx,dy].lookup :=  Passthrough;
+
+  Grid.Cells[Grid.Width-1,0].lookup:= $0000000088888888;
+  For dx := 0 to Grid.Width-2 do
+    Grid.Cells[dx,0].lookup := $FF08FF0877807780;
+
+  For dx := 0 to Grid.Width-1 do
+    Grid.Cells[dx,Grid.Height-1].lookup := $4444000044440000;  // reflect down, otherwise 0
+
   WriteLn('Running ',T,' full cycles');
   T1 := SysUtils.Now;
   For i := 1 to T do
