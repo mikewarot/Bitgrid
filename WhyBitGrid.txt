@@ -1,0 +1,68 @@
+Why are you pursuing this idea?
+
+It's been nagging at me since the 1980s, and in 1993 when I read George Guilder's call to waste transistors [1], I suspected I was on the right path. As time has gone on, I see the opprotunities I've missed in the intervening decades, and I want to get this idea out into the world before I'm gone. It's a bucket list item for me.
+
+Why should I care about this?
+
+The potential for vastly faster compute without the massive complexity of modern CPU design could open up a huge range of possible applications. It's just possible that this could make Exaflop performace far more affordable, with power, and greater efficiency.
+
+Ok... talk me through it:
+
+When you run a program in a PC, most of the transistors in that computer are idle, because most of them are in memory, waiting for that one in a billion (or more) chance to be read or written.... once that happens, it's a mad rush to get the data into (or from) the CPU, then back to waiting. Almost all of the transistors in a computer are waiting at any given instant. This is highly inefficient, from a compute standpoint.
+
+When a program needs to be faster, specialize hardware is called into play, like GPUs in graphics cards, DSPs for signal processing, or special TPU and other chips to process neural networks.  If an application demands the ultimate in speed, a custom chip is made, an ASIC (Application Specific Integrated Circuit).
+
+Usually the prototype for this ASIC is implemented in a special chip called an FPGA (Field Programmable Gate Array). These chips are fairly expensive, and optimzed to act like (emulate) the ASIC, to see if it will work properly in the desired use.
+
+FPGAs are highly optimized for their task, they have special "routing" hardware to get data across the chip faster once the logic is done with it.
+
+The programs for an FPGA are written in a language such as VHDL,Verilog, RTL or other proprietary systems. These systems often take hours or days to compile a particularly large program, as it is necessary to fit all the logic within the chip most efficiently, and this is like a jigsaw puzzle.
+
+*The routing hardware makes the chip more efficient, but makes programming harder* - this is a tradeoff widely accepted in industry.
+
+This brings you up to speed on how things work at present in most systems.
+
+The BitGrid is different. It is a radical departure from the way FPGAs work.
+
+  There is NO routing hardware, which means logic has to fill in for it in all cases
+    This means that much of the logic could be wasted, if not adequately utilized.
+  The chip is deliberately slowed down, so that every step between cells has a delay.
+    This means that the BitGrid would be a horrible FPGA, hundreds or thousands of times slower.
+	
+However... these changes offer some new possibilities
+
+  Because there is no fixed routing hardware
+    Compilers are free to send data to any cell, and nudge things around freely.
+	A "program" can be rotated or flipped or moved around on the chip at will
+	It's possible to route around damaged cells
+	It is possible to completely secure a section of code by literally walling it off
+	
+  Because of the 2 phase clocking
+    Each cell is deterministic, there is alwas a known output given all the inputs
+	Race conditions and timing skew, which plague FPGAs, are eliminated.
+	Each cell can compute its work at the exact same time all of the others are, without conflict
+	Applications in which data flows through the chip could produce a new output on each cycle.
+	
+	
+  Because of the very simple, regular structure of the BitGrid
+    Chip design is greatly simplified, and much easier to build, test, etc.
+	Testing and programming can be open source, verified, and trusted much easier
+	Utilization is easy to measure, and can be planned appropriately
+	
+It is my OPINION that the BitGrid offers a novel model of computation, in much the same manner as the Turing Machine, but one optimized for actual use.
+
+The downside is obvious, everything happens in parallel on this chip, it's uniquely UNsuitable for running "soft core" CPUs, etc. It requires some form of host system to set it up, and get it running. There are no tools for programming, debugging, or even proper terminology for tracking data as it flows through the system. ALL of these need to be developed.
+
+I think they are all tractible, but it's beyond what I can manage alone. I'm hoping that the open source software and hardware communities can help out with this.
+
+Thanks for your time and attention.
+  --Mike--
+  
+  Mike Warot
+
+
+
+
+--- Footnotes, in the HN style ---
+
+[1] https://www.wired.com/1993/04/gilder-4/
