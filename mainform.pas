@@ -15,11 +15,15 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    ButtonPhaseA: TButton;
+    ButtonPhaseB: TButton;
     CheckBox1: TCheckBox;
     Memo1: TMemo;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure ButtonPhaseAClick(Sender: TObject);
+    procedure ButtonPhaseBClick(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -111,6 +115,18 @@ begin
   For x := 0 to Grid1.Width-1 do
     Grid1.Cells[x,Grid1.Height-1].lookup := $4444000044440000;  // reflect down, otherwise 0
 
+end;
+
+procedure TForm1.ButtonPhaseAClick(Sender: TObject);
+begin
+  Grid1.DoPhaseA;
+  Form1.Memo1.Append('phase A executed');
+end;
+
+procedure TForm1.ButtonPhaseBClick(Sender: TObject);
+begin
+  Grid1.DoPhaseB;
+  Form1.Memo1.Append('phase B executed');
 end;
 
 procedure TForm1.CheckBox1Change(Sender: TObject);
