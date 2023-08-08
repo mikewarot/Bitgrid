@@ -34,19 +34,22 @@ Data Structure:
   Each cell will have 4 bits (a nibble) of input, 4 bits of output, and 16 nibbles of program
   It turns out, it's easier to just use a uint64 for the implementation, for now
   
-How to program a BitGrid - an ongoing adventure in Computer Science
-  Start from the desired output, as an expression (to start)
-  Break that down into an acyclic directed graph that points towards the output, using the standard ops
-  Break each op down into logic that works on bits, making a new, finer grained graph
-  Break each of those down until it has 4 or fewer bit inputs (ideally 3 or less, for routing)
-  Now it should be possible (if it fits) to route it into the bitgrid, using a table, for each output of a cell (4 outputs/cell in the canonical cell) a pointer to where in the graph that cell is, How many clock cycles back from the output it is, and then satisfy each of its inputs.  (Place the output cells first, then work down the tree)
-  
-  Anywhere you can't fit all the inputs, add routing spacers
-  Anywhere there are equivalent expressions, even if the clocking is different, they can be merged, with a suitable number of spacers
+## How to program a BitGrid - an ongoing adventure in Computer Science
+
+  * Start from the desired output, as an pascal expression (to start)
+  * Break that down into an acyclic directed graph that points towards the output, using the standard ops 
+  * Break each op down into logic that works on bits, making a new, finer grained graph
+  * Break each of those down until it has 4 or fewer bit inputs (ideally 3 or less, for routing)
+  * Now it should be possible (if it fits) to route it into the bitgrid, using a table, for each output of a cell (4 outputs/cell in the canonical cell) a pointer to where in the graph that cell is, **How many clock cycles back from the output it is**, and then satisfy each of its inputs.  (Place the output cells first, then work down the tree)
+
+  * Helpful other steps
+    * Anywhere you can't fit all the inputs, add routing spacers
+    * Anywhere there are equivalent expressions, even if the clocking is different, they can be merged, with a suitable number of spacers
   
   Then work backwards towards the input
-  
-  
+
+## Status
+    
 As of 6/15/2023 - Code looks awful, but I can ripple bits accross a bitgrid, and it's uploaded to github
   
-As of 8/8/2023 - I've built a crude benchmark, and can get a 1024 x 1024 grid simulated at 36 Hz on my desktop machine.
+As of 8/8/2023 - I've built a crude benchmark, and can get a 1024 x 1024 grid simulated at 36 Hz on my desktop machine. And **I've figured out how I'm going to program it**
