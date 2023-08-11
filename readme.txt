@@ -67,7 +67,7 @@ A+B,B,A,0
 1000 - a AND b
 1001 - NOT (a XOR b)
 1010 - a
-1011 - (NOT a) OR b
+1011 - a OR (NOT b)
 1100 - b
 1101 - b or (NOT a)
 1110 - a OR b
