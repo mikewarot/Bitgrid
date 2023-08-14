@@ -72,3 +72,34 @@ A+B,B,A,0
 1101 - b or (NOT a)
 1110 - a OR b
 1111 - True
+
+8/14/2023 - More thinking about how to proceed
+
+Expression --> Abstract Syntax Tree --> Binary Expression Tree --> Binary Logical Expression Tree --> Routing/Placement
+
+Expression Examples
+
+  Output = InputA + InputB
+  
+AST - Abstract Syntax Tree Examples
+
+  Assign(Output,Sum(InputA,InputB))
+  
+Binary Expression Tree Examples
+
+  Output = Sum(A,B)
+  
+Binary Logical Expression Tree
+
+  Sum0   = A0 XOR B0
+  Carry0 = A0 AND B0
+  Sum1   = A1 XOR B1 XOR Carry0
+  Carry1 = (Carry0 AND A1) OR (Carry0 AND B1) OR (A1 AND B1)
+   ...
+  Sum(N)   = A(N) XOR B(N) XOR Carry(N-1)
+  Carry(N) = (Carry(N-1) AND A(N)) OR (Carry(N-1) AND B(N)) OR (A(N) AND B(N))
+  
+Routing and Placement
+
+  Use A* algorithm for actual routing
+  
