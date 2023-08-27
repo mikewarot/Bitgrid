@@ -12,16 +12,16 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
+    ButtonDumpContents: TButton;
+    ButtonRunCycle: TButton;
+    ButtonPassThrough: TButton;
     ButtonPhaseA: TButton;
     ButtonPhaseB: TButton;
     CheckBox1: TCheckBox;
     Memo1: TMemo;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
+    procedure ButtonDumpContentsClick(Sender: TObject);
+    procedure ButtonRunCycleClick(Sender: TObject);
+    procedure ButtonPassThroughClick(Sender: TObject);
     procedure ButtonPhaseAClick(Sender: TObject);
     procedure ButtonPhaseBClick(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
@@ -49,7 +49,7 @@ begin
   Form1.Memo1.Append('10x10 grid created');
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.ButtonDumpContentsClick(Sender: TObject);
 var
   x,y : integer;
   s : string;
@@ -90,7 +90,7 @@ begin
   memo1.Append(' '+IntToStr(Grid1.CycleCount) + ' cycles executed');
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TForm1.ButtonRunCycleClick(Sender: TObject);
 begin
   if Checkbox1.Checked then
     Grid1.Cells[3,7].input := $0f
@@ -100,7 +100,7 @@ begin
   Grid1.DoClock;
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TForm1.ButtonPassThroughClick(Sender: TObject);
 var
   x,y : integer;
 begin

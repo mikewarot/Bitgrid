@@ -20,7 +20,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="103"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="49"/>
         <CursorPos X="18" Y="122"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
@@ -30,9 +31,8 @@
         <Filename Value="bitgridengine.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BitGridEngine"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="19" Y="26"/>
+        <CursorPos Y="80"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit>

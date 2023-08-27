@@ -75,82 +75,8 @@ Procedure TBitGrid.DoClock;
 var
   x,y,next : integer;
 begin
-  // do phase A, only even cells
-  for y := 0 to Height-1 do
-    for x := 0 to Width-1 do
-      if NOT Odd(x+y) then
-        with cells[x,y] do
-          begin
-            // compute the new output
-            output:= lookup SHR (input*4) AND $0f;
-            // distribute the output to the inputs of neigbors
-            //   right
-            next := wrap((x+1),width);
-            if (output AND 2) <> 0 then
-              cells[next,y].input := cells[next,y].input OR $08
-            else
-              cells[next,y].input := cells[next,y].input AND $07;
-
-            //   left
-            next := wrap(x-1,width);
-            if (output AND 8) <> 0 then
-              cells[next,y].input := cells[next,y].input OR $02
-            else
-              cells[next,y].input := cells[next,y].input AND $0d;
-
-            //   down
-            next := wrap(y+1,height);
-            if (output AND 4) <> 0 then
-              cells[x,next].input := cells[x,next].input OR $01
-            else
-              cells[x,next].input := cells[x,next].input AND $0e;
-
-            //   up
-            next := wrap(y-1,height);
-            if (output AND 1) <> 0 then
-              cells[x,next].input := cells[x,next].input OR $04
-            else
-              cells[x,next].input := cells[x,next].input AND $0b;
-          end;
-
-  // do phase B, only odd cells
-  for y := 0 to Height-1 do
-    for x := 0 to Width-1 do
-      if Odd(x+y) then
-        with cells[x,y] do
-          begin
-            // compute the new output
-            output:= lookup SHR (input*4) AND $0f;
-            // distribute the output to the inputs of neigbors
-            //   right
-            next := wrap((x+1),width);
-            if (output AND 2) <> 0 then
-              cells[next,y].input := cells[next,y].input OR $08
-            else
-              cells[next,y].input := cells[next,y].input AND $07;
-
-            //   left
-            next := wrap(x-1,width);
-            if (output AND 8) <> 0 then
-              cells[next,y].input := cells[next,y].input OR $02
-            else
-              cells[next,y].input := cells[next,y].input AND $0d;
-
-            //   down
-            next := wrap(y+1,height);
-            if (output AND 4) <> 0 then
-              cells[x,next].input := cells[x,next].input OR $01
-            else
-              cells[x,next].input := cells[x,next].input AND $0e;
-
-            //   up
-            next := wrap(y-1,height);
-            if (output AND 1) <> 0 then
-              cells[x,next].input := cells[x,next].input OR $04
-            else
-              cells[x,next].input := cells[x,next].input AND $0b;
-          end;
-  Inc(CycleCount);
+  DoPhaseA;
+  DoPhaseB;
 end;
 
 procedure TBitGrid.DoPhaseA;
