@@ -15,16 +15,26 @@ Type
     lookup : int64;  // 16 nibbles
   end;
 
+  tBoolFunction = Function : Boolean;
+  pBoolFunction = ^tBoolFunction;
+
+  tBooleanInput = record
+    X,Y : Integer;
+    Source : pBoolFunction;
+  end;
+
   TBitGrid = object
       Cells : array of array of TBitCell;
       Height,Width : integer;
       CycleCount   : UInt64;
+      IOtest       : tBooleanInput;
       constructor Init(Xsize, YSize : integer);
       destructor Done;
       procedure DoClock;
       procedure DoPhaseA;
       procedure DoPhaseB;
   end;
+
 
 Const
   PassThrough = $FB73EA62D951C840;
@@ -64,6 +74,9 @@ begin
         cells[x,y].output := 0;
         cells[x,y].lookup := PassThrough;
       end;
+  IOtest.X := 3;
+  IOtest.Y := 7;
+  IOtest.Source := nil;
 end;
 
 Destructor TBitGrid.Done;
@@ -83,6 +96,15 @@ procedure TBitGrid.DoPhaseA;
 var
   x,y,next : integer;
 begin
+  // process the override list (one item for now)
+  If IOtest.Source <> nil then
+  begin
+    If IOtest.Source^() then
+      Cells[IOtest.X, IOtest.Y].input := $0f
+    else
+      Cells[IOtest.X, IOtest.Y].input := 00; ;
+  end;
+
   // do phase A, only even cells
   for y := 0 to Height-1 do
     for x := 0 to Width-1 do

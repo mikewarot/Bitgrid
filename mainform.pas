@@ -47,6 +47,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   Grid1.Init(10,10);
   Form1.Memo1.Append('10x10 grid created');
+//  Grid1.IOtest.Source := @Form1.CheckBox1.Checked;
 end;
 
 procedure TForm1.ButtonDumpContentsClick(Sender: TObject);
@@ -58,6 +59,7 @@ begin
     Grid1.Cells[3,7].input := $0f
   else
     Grid1.Cells[3,7].input := 00;
+
 
   memo1.Append('Program Dump: ');
   for y := 0 to Grid1.Height-1 do
