@@ -20,7 +20,7 @@ Type
 
   tBooleanInput = record
     X,Y : Integer;
-    Source : pBoolFunction;
+    Source : ^Boolean;
   end;
 
   TBitGrid = object
@@ -99,7 +99,7 @@ begin
   // process the override list (one item for now)
   If IOtest.Source <> nil then
   begin
-    If IOtest.Source^() then
+    If IOtest.Source^ then
       Cells[IOtest.X, IOtest.Y].input := $0f
     else
       Cells[IOtest.X, IOtest.Y].input := 00; ;

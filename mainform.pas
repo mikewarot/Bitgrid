@@ -30,6 +30,7 @@ type
   private
 
   public
+    ButtonChecked : Boolean;
 
   end;
 
@@ -47,7 +48,9 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   Grid1.Init(10,10);
   Form1.Memo1.Append('10x10 grid created');
-//  Grid1.IOtest.Source := @Form1.CheckBox1.Checked;
+  ButtonChecked := Checkbox1.Checked;
+  Grid1.IOtest.Source := @Form1.ButtonChecked;
+
 end;
 
 procedure TForm1.ButtonDumpContentsClick(Sender: TObject);
@@ -55,11 +58,12 @@ var
   x,y : integer;
   s : string;
 begin
+{
   if Checkbox1.Checked then
     Grid1.Cells[3,7].input := $0f
   else
     Grid1.Cells[3,7].input := 00;
-
+}
 
   memo1.Append('Program Dump: ');
   for y := 0 to Grid1.Height-1 do
@@ -94,11 +98,12 @@ end;
 
 procedure TForm1.ButtonRunCycleClick(Sender: TObject);
 begin
+  {
   if Checkbox1.Checked then
     Grid1.Cells[3,7].input := $0f
   else
     Grid1.Cells[3,7].input := 00;
-
+  }
   Grid1.DoClock;
 end;
 
@@ -133,6 +138,7 @@ end;
 
 procedure TForm1.CheckBox1Change(Sender: TObject);
 begin
+  ButtonChecked := Checkbox1.Checked;
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
