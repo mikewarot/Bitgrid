@@ -20,8 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <TopLine Value="17"/>
-        <CursorPos X="58" Y="40"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="25"/>
+        <CursorPos X="47" Y="52"/>
         <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -30,10 +31,9 @@
         <Filename Value="bitgridengine.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BitGridEngine"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="86"/>
-        <CursorPos X="22" Y="102"/>
+        <TopLine Value="7"/>
+        <CursorPos X="11" Y="23"/>
         <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit>
@@ -54,67 +54,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="22" Column="30"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="18" Column="37"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="20" Column="22"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="50" Column="3" TopLine="32"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="137" TopLine="113"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="97" Column="43" TopLine="77"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="20" Column="15"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="97" Column="26" TopLine="79"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="20" Column="22" TopLine="2"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="98" Column="20" TopLine="79"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="98" Column="23" TopLine="79"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="20" Column="30" TopLine="2"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="18" Column="36" TopLine="4"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="23" Column="16" TopLine="7"/>
-      </Position>
-      <Position>
-        <Filename Value="bitgridengine.pas"/>
-        <Caret Line="102" Column="24" TopLine="86"/>
-      </Position>
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="98" TopLine="82"/>
@@ -174,6 +114,61 @@
       <Position>
         <Filename Value="bitgridengine.pas"/>
         <Caret Line="23" Column="22" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+        <Caret Line="93" Column="65" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+        <Caret Line="3" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="40" Column="58" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="43" Column="2" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="45" Column="2" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="83" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="94" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+        <Caret Line="6" Column="35"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+        <Caret Line="23" Column="11"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+        <Caret Line="79" Column="16" TopLine="52"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+        <Caret Line="100" Column="19" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+        <Caret Line="102" Column="21" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="2" Column="33"/>
       </Position>
     </JumpHistory>
     <RunParams>
