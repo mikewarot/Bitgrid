@@ -9,8 +9,8 @@
         <Filename Value="bitgrid_gui.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="10" Y="13"/>
-        <UsageCount Value="29"/>
+        <CursorPos X="46" Y="13"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,21 +20,18 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="25"/>
-        <CursorPos X="47" Y="52"/>
-        <UsageCount Value="29"/>
+        <CursorPos X="72" Y="97"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="bitgridengine.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BitGridEngine"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="7"/>
-        <CursorPos X="11" Y="23"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="25"/>
+        <CursorPos X="14" Y="40"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -42,8 +39,19 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="5"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="30"/>
         <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="bitgridutil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BitGridUtil"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="13"/>
+        <CursorPos X="5" Y="45"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
@@ -54,23 +62,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="98" TopLine="82"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="97" Column="32" TopLine="81"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="52" Column="39" TopLine="36"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="15" Column="20"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="106" Column="4" TopLine="49"/>
@@ -169,6 +161,26 @@
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="2" Column="33"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridutil.pas"/>
+        <Caret Line="28" Column="29"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="52" Column="47" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="54" Column="47" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="95" Column="33" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="8" Column="82"/>
       </Position>
     </JumpHistory>
     <RunParams>

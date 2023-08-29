@@ -5,13 +5,14 @@ unit MainForm;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, BitGridEngine;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, BitGridEngine, BitGridUtil;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    Button1: TButton;
     ButtonDumpContents: TButton;
     ButtonRunCycle: TButton;
     ButtonPassThrough: TButton;
@@ -19,6 +20,7 @@ type
     ButtonPhaseB: TButton;
     CheckBox1: TCheckBox;
     Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
     procedure ButtonDumpContentsClick(Sender: TObject);
     procedure ButtonRunCycleClick(Sender: TObject);
     procedure ButtonPassThroughClick(Sender: TObject);
@@ -86,6 +88,11 @@ begin
 
   memo1.Append('Allbits = '+IntToHex(AllBits,16));
   memo1.Append(' '+IntToStr(Grid1.CycleCount) + ' cycles executed');
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Memo1.Append(DumpCode(PassThrough));
 end;
 
 procedure TForm1.ButtonRunCycleClick(Sender: TObject);

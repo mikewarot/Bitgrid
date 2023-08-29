@@ -51,6 +51,11 @@
         <Filename Value="readme.txt"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="bitgridutil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BitGridUtil"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

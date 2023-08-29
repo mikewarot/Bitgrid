@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, MainForm, BitGridEngine
+  Forms, MainForm, BitGridEngine, BitGridUtil
   { you can add units after this };
 
 {$R *.res}
