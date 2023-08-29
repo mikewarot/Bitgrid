@@ -12,7 +12,7 @@ Type
 
   TBitCell = record
     input, output : nibble;
-    lookup : int64;  // 16 nibbles
+    lookup : Uint64;  // 16 nibbles
   end;
 
   tBoolFunction = Function : Boolean;
