@@ -50,27 +50,38 @@ uses
 var
   x,y,z : uInt64;
   i,j,k : integer;
-  a,b,c,s,t : string;
+  a,b,c,d,s,t,Q : string;
+  mask : uInt64;
 begin
-  a := '1010';
-  b := '1100';
+  a := '1010101010101010';
+  b := '1100110011001100';
+  c := '1111000011110000';
+  d := '1111111100000000';
 
-  for i := 0 to 15 do
+  for i := 0 to 65535 do
   begin
-    c := '';
-    if (i AND 8) <> 0 then C := C + '1' else C := C + '0';
-    if (i AND 4) <> 0 then C := C + '1' else C := C + '0';
-    if (i AND 2) <> 0 then C := C + '1' else C := C + '0';
-    if (i AND 1) <> 0 then C := C + '1' else C := C + '0';
+    Q := '';
+    Mask := 32768;
+    while Mask <> 0 do
+    begin
+      if (i AND Mask) <> 0 then Q := Q + '1' else Q := Q + '0';
+      Mask := Mask shr 1;
+    end;
 
-    WriteLn('Iteration : ',C);
+    WriteLn('Iteration : ',Q);
 
-    StringSplit(C,A,S,T);
+    StringSplit(Q,A,S,T);
     If StringEqual(S,T) then WriteLn('A is not involved')
-                        else WriteLn('A splits ',c,' into ',S,' and ',T);
-    StringSplit(C,B,S,T);
+                        else WriteLn('A splits ',Q,' into ',S,' and ',T);
+    StringSplit(Q,B,S,T);
     If StringEqual(S,T) then WriteLn('B is not involved')
-                        else WriteLn('B splits ',c,' into ',S,' and ',T);
+                        else WriteLn('B splits ',Q,' into ',S,' and ',T);
+    StringSplit(Q,C,S,T);
+    If StringEqual(S,T) then WriteLn('C is not involved')
+                        else WriteLn('C splits ',Q,' into ',S,' and ',T);
+    StringSplit(Q,D,S,T);
+    If StringEqual(S,T) then WriteLn('D is not involved')
+                        else WriteLn('D splits ',Q,' into ',S,' and ',T);
   end;
 
 
