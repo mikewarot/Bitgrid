@@ -9,8 +9,9 @@
         <Filename Value="bitgrid_coding_tests.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="26" Y="14"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="50"/>
+        <CursorPos X="54" Y="73"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -18,7 +19,7 @@
         <UnitName Value="BitGridUtil"/>
         <EditorIndex Value="2"/>
         <TopLine Value="13"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -26,11 +27,11 @@
         <UnitName Value="BitGridEngine"/>
         <EditorIndex Value="1"/>
         <TopLine Value="25"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="6">
+    <JumpHistory HistoryIndex="10">
       <Position>
         <Filename Value="bitgrid_coding_tests.lpr"/>
         <Caret Line="7" Column="40"/>
@@ -58,6 +59,22 @@
       <Position>
         <Filename Value="bitgrid_coding_tests.lpr"/>
         <Caret Line="18" Column="9" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgrid_coding_tests.lpr"/>
+        <Caret Line="17" Column="20"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgrid_coding_tests.lpr"/>
+        <Caret Line="35" Column="26" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgrid_coding_tests.lpr"/>
+        <Caret Line="63" Column="27" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgrid_coding_tests.lpr"/>
+        <Caret Line="59" Column="14" TopLine="40"/>
       </Position>
     </JumpHistory>
     <RunParams>
