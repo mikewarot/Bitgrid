@@ -2,6 +2,13 @@ program bitgrid_coding_tests;
 uses
   SysUtils, BitGridEngine, BitGridUtil;
 
+const
+  a : string = '1010101010101010';
+  b : string = '1100110011001100';
+  c : string = '1111000011110000';
+  d : string = '1111111100000000';
+
+
   function StringNot(S : String):String;
   var
     i : integer;
@@ -47,17 +54,32 @@ uses
                          else A := A + Source[i];
   end;
 
+  Function StringMerge(Source1,Source2, Mask : String):String;
+  var
+    i : integer;
+    s : string;
+  begin
+    s := '';
+    for i := 1 to length(Mask) do
+      if Mask[i] = '1' then
+        begin
+          s := s + Source2[1];
+          Delete(Source2,1,1);
+        end
+      else
+        begin
+          s := s + Source1[1];
+          Delete(Source1,1,1);
+        end;
+    StringMerge := S;
+  end;
+
 var
   x,y,z : uInt64;
   i,j,k : integer;
-  a,b,c,d,s,t,Q : string;
+  s,t,Q : string;
   mask : uInt64;
 begin
-  a := '1010101010101010';
-  b := '1100110011001100';
-  c := '1111000011110000';
-  d := '1111111100000000';
-
   for i := 0 to 65535 do
   begin
     Q := '';
@@ -72,16 +94,31 @@ begin
 
     StringSplit(Q,A,S,T);
     If StringEqual(S,T) then WriteLn('A is not involved')
-                        else WriteLn('A splits ',Q,' into ',S,' and ',T);
+                        else WriteLn('A ',A,' splits ',Q,' into ',S,' and ',T);
+
+    If (S = '00000000') AND  (T <> '00000000') then
+      WriteLn('Logical Expression A AND ',T);
+
+    If StringEqual(S,StringNot(T)) then
+      WriteLn('XOR found');
+
     StringSplit(Q,B,S,T);
     If StringEqual(S,T) then WriteLn('B is not involved')
-                        else WriteLn('B splits ',Q,' into ',S,' and ',T);
+                        else WriteLn('B ',B,' splits ',Q,' into ',S,' and ',T);
+    If StringEqual(S,StringNot(T)) then
+      WriteLn('XOR found');
+
     StringSplit(Q,C,S,T);
     If StringEqual(S,T) then WriteLn('C is not involved')
-                        else WriteLn('C splits ',Q,' into ',S,' and ',T);
+                        else WriteLn('C ',C,' splits ',Q,' into ',S,' and ',T);
+    If StringEqual(S,StringNot(T)) then
+      WriteLn('XOR found');
+
     StringSplit(Q,D,S,T);
     If StringEqual(S,T) then WriteLn('D is not involved')
-                        else WriteLn('D splits ',Q,' into ',S,' and ',T);
+                        else WriteLn('D ',D,' splits ',Q,' into ',S,' and ',T);
+    If StringEqual(S,StringNot(T)) then
+      WriteLn('XOR found');
   end;
 
 
