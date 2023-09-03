@@ -99,6 +99,9 @@ begin
     If (S = '00000000') AND  (T <> '00000000') then
       WriteLn('Logical Expression A AND ',T);
 
+    If (T = '11111111') AND (S <> '00000000') then
+      WriteLn('Logical Expression A OR ',S);
+
     If StringEqual(S,StringNot(T)) then
       WriteLn('XOR found');
 
