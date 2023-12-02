@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="PassThrough.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="12"/>
+        <CursorPos X="37" Y="38"/>
+        <ExtraEditorCount Value="1"/>
+        <ExtraEditor1>
+          <EditorIndex Value="-1"/>
+          <WindowIndex Value="1"/>
+          <TopLine Value="-1"/>
+          <CursorPos X="-1" Y="-1"/>
+        </ExtraEditor1>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="bitgridengine2.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <ExtraEditorCount Value="1"/>
+        <ExtraEditor1>
+          <EditorIndex Value="-1"/>
+          <TopLine Value="31"/>
+          <CursorPos X="7" Y="46"/>
+        </ExtraEditor1>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="bitgridengine.pas"/>
+        <UnitName Value="BitGridEngine"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="167"/>
+        <CursorPos X="42" Y="194"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="12">
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="7" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="3" Column="46"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="22" Column="46"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="24" Column="33" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="22" Column="46" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="24" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="23" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="31" Column="5" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="32" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="bitgridengine.pas"/>
+        <Caret Line="194" Column="42" TopLine="167"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="31" Column="51" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="36" Column="27" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="PassThrough.lpr"/>
+        <Caret Line="9" Column="6"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="PassThrough.lpr"/>
+        <Line Value="24"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

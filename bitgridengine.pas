@@ -33,6 +33,7 @@ Type
       procedure DoClock;
       procedure DoPhaseA;
       procedure DoPhaseB;
+      procedure PutBit(X,Y : Integer; Bit : Boolean);
   end;
 
 
@@ -187,6 +188,15 @@ begin
           end;
   Inc(CycleCount);
 end; // DoPhgaseB
+
+procedure TBitGrid.PutBit(X,Y : Integer; Bit : Boolean);
+begin
+  // put the input to all inputs, for now
+  if Bit then
+    cells[x,y].input:= $0f
+  else
+    cells[x,y].input:= $00;
+end;
 
 end.
 
