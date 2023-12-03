@@ -103,3 +103,32 @@ Routing and Placement
 
   Use A* algorithm for actual routing
   
+-----
+
+  December 3, 2023
+  Long dormant, time to collide bitgrid against advent of code
+  
+  Need an I/O subsystem, but it has to have some features
+    everything queued, so that it can happen at each clock cycle asynchronously
+	Input and output queues
+	Overwrite queues
+	
+	StartCycle - cycle number for the start of an I/O
+	EndCycle - if provided, the last cycle to listen to
+	Cell, Port - which I/O channel should a bit come from?
+	The queues should be ring buffers for performance
+	
+	Start thinking about BitGrid chip actual I/O signals/performance, etc.
+	
+ Need a programming/debug subsystem
+    StartCycle - cycle number to write code at
+	Cell address, LUT values
+	Could make it async, ok... let's do that
+	  This would allow reuse on the fly of sections to handle multiple tasks
+	Map range of I/O or cells to display for debug, monitoring, etc.
+	
+ Need a logging subsystem
+   Log all programming, debug, and I/O operations
+	
+	
+	
