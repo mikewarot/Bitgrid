@@ -131,4 +131,19 @@ Routing and Placement
    Log all programming, debug, and I/O operations
 	
 	
-	
+ December 8, 2023
+   Short term tasks:
+     Build an acyclic directed graph from random choices, get it out on a text file
+     Figure out how to map those to nodes in a grid, with 0 cost spacers
+     Figure out how to count for delays
+     Figure out how to map into bitgrid cells
+     Figure out logic mapping through the above   
+	 Compute delays
+	 Can we do cyclic graphs?
+	 Can we take a mapped graph and work backwards
+	 Can we route around a bad cell?
+	 Fill the bitgrid with random numbers
+	   Make that into a graph
+	     Remove unlinked nodes
+		   Show updated grid without unlinked nodes
+		   
