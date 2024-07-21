@@ -1,0 +1,63 @@
+July 21, 2024 - random ideas to un-stick things
+
+
+the bitgrid can evaluate any tree of binary expressions, provided they are suitably mapped to cells
+
+mapping those nodes can be done using A* search, provided each has 4 inputs or less
+
+each node increments a "generation" or "delay" counter, and you can add delays to match things up
+
+8x8 bit integer multiplication results in 16 bits output, and thus there are 16 inter-related binary trees to resolve
+
+I'm stuck at analysis paralysis -
+
+How to express these trees in an IR language for mapping into the bitgrid   ::: a linker
+How to generate these trees in the first place, from source code  ::: a compiler
+
+Toy example: a binary counter, with reset
+
+A0' := ~RESET  OR   ~A0
+CARRY0' :=  ~RESET AND A0
+A1' := ~RESET AND ((CARRY0' AND A1) OR (~CARRY0' AND ~A1))
+CARRY1' := ~RESET AND (CARRY0' AND A1)
+
+for n = 2 to width
+An' := ~RESET AND ((CARRYn-1' AND An) OR (~CARRYn-1' AND ~An))
+CARRYn' := ~RESET AND (CARRYn-1' AND An)
+
+restating as binary   (for 2 functions, give values     f(0,0),f(0,1),f(1,0),f(1,1))
+
+A0' := f(RESET,A0):[1,0,0,0]
+Carry0' := f(RESET,A0):[0,1,0,0]
+
+(for 3 functions, give values f(0,0,0),f(0,0,1),f(0,1,0)....f(1,1,1) - count in binary)
+A1'  := f(RESET,CARRY0,A1):[0,1,1,0,0,0,0,0]
+CARRY1' := f(RESET,CARRY0,A1):[0,0,0,1,0,0,0,0]
+
+An'  := f(RESET,CARRYn-1,An):[0,1,1,0,0,0,0,0]
+CARRYn' := f(RESET,CARRYn-1,An):[0,0,0,1,0,0,0,0]
+
+If multiple functions use the same inputs, they can be mapped into a common cell, to be space efficient
+
+restating above to make RESET pipelined with everything else
+
+A0' := f(RESET,A0):[1,0,0,0]
+Carry0' := f(RESET,A0):[0,1,0,0]
+RESET0' := RESET
+
+(for 3 functions, give values f(0,0,0),f(0,0,1),f(0,1,0)....f(1,1,1) - count in binary)
+A1'  := f(RESET0,CARRY0,A1):[0,1,1,0,0,0,0,0]
+CARRY1' := f(RESET0,CARRY0,A1):[0,0,0,1,0,0,0,0]
+RESET1' := RESET0
+
+An'  := f(RESETn-1,CARRYn-1,An):[0,1,1,0,0,0,0,0]
+CARRYn' := f(RESETn-1,CARRYn-1,An):[0,0,0,1,0,0,0,0]
+RESETn' := RESETn-1
+
+
+
+
+Perhaps it's best to compile all expressions to binary tables as step #1?
+
+
+
