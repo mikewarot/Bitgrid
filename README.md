@@ -53,3 +53,5 @@ Data Structure:
 As of 6/15/2023 - Code looks awful, but I can ripple bits accross a bitgrid, and it's uploaded to github
   
 As of 8/8/2023 - I've built a crude benchmark, and can get a 1024 x 1024 grid simulated at 36 Hz on my desktop machine. And **I've figured out how I'm going to program it**
+
+As of 12/3/2023 - I'm starting to plan the Programming, Debug, I/O subsystems, so I can use the BitGridEngine to in AdventOfCode, which should be quite interesting.
