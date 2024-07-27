@@ -59,5 +59,29 @@ RESETn' := RESETn-1
 
 Perhaps it's best to compile all expressions to binary tables as step #1?
 
+----
+
+July 27, 2024 More brainstorming
+
+According to GeoHot (George Hotz), 20 Petaflops (BFLOAT 16) is a "Person" of Compute
+
+Reference - https://geohot.github.io//blog/jekyll/update/2023/04/26/a-person-of-compute.html
+
+Search for NVidia A100, the 312 TFlops of performance is for Bfloat16 operands
+
+Assume 512 cells for a BFLOAT16 multiplier  (16x16x2 for inefficiency in layout)
+
+Assume 1 GHZ clock rate
+
+20,000,000,000,000,000 / 1000,000,000 --> 20,000,000 multipliers * 512 --> 1024,000,000 cells
+
+assume 1000 transistors / cell
+
+1,024,000,000,000 transistors would be needed to reach GeoHot's "Person"
+
+It seems reasonable to want to decrease the number of cells in a BFLOAT16 multiplier, transistors/cell, or increas the clock frequency to decrease the total transistor count requires.
+
+
+
 
 
